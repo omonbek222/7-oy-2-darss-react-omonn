@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
+import Posts from "../Components/Posts";
 
 export const Home = () => {
   const [home, setProfile] = useState([]);
@@ -26,6 +28,7 @@ export const Home = () => {
 
   return (
     <>
+    <Navbar/>
       {home.map((profile) => (
         <div
           key={profile._id}

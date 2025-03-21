@@ -1,14 +1,15 @@
 import axios from "axios";
 import React, { useContext, useState, useEffect } from "react";
-import AuthContext from "../context/AuthContext";
 import Navbar from "./Navbar";
 import Loading from "./Loading";
-// import { toast } from "react-toastify";
+import { FaUser } from "react-icons/fa";
+import AuthContext from "../context/AuthContext";
+
 
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
-  const { user, token } = useContext(AuthContext);
+  const {user,  token } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   const [text, setText] = useState("");
 
@@ -61,12 +62,6 @@ const Posts = () => {
       setLoading(false);
     }
   }
-  if (loading)
-    return (
-      <p>
-        <Loading />
-      </p>
-    );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -85,7 +80,7 @@ const Posts = () => {
           },
         }
       );
-      toast.success("Post muvaffaqiyatli qo'shildi!");
+      // toast.success("Post muvaffaqiyatli qo'shildi!");
       setPosts((prevPosts) => [res.data, ...prevPosts]);
       setText("");
     } catch (error) {
@@ -150,8 +145,8 @@ const Posts = () => {
                 Posted on {new Date(post.date).toLocaleDateString("uz-UZ")}
               </p>
               <div className="flex gap-[8px]">
-                <BiSolidLike className="w-[57px] h-[38.4px] p-[7px] border-[#f4f4f4] border bg-[#f4f4f4]" />
-                <BiSolidDislike className="w-[57px] h-[38.4px] p-[7px] border-[#f4f4f4] border bg-[#f4f4f4]" />
+                {/* <BiSolidLike className="w-[57px] h-[38.4px] p-[7px] border-[#f4f4f4] border bg-[#f4f4f4]" /> */}
+                {/* <BiSolidDislike className="w-[57px] h-[38.4px] p-[7px] border-[#f4f4f4] border bg-[#f4f4f4]" /> */}
                 <button className="w-[119px] bg-[#17a2b8] text-white h-[38.4px] p-[7px] border-[#17a2b8]">
                   Discussion
                 </button>

@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { login } from "../service/authService";
 import Navbar from "../Components/Navbar";
-// import { FaUser } from "react-icons/fa";
-// import { IoIosEye, IoIosEyeOff } from "react-icons/io";
-
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -35,8 +32,6 @@ const Login = () => {
       navigate("/developers ");
 
       if (response?.token) {
-        // setToken(response.token);
-        // setUser(response.user || {});
         localStorage.setItem("user", JSON.stringify(response.user || {}));
       } else {
         setError(response?.message || "Email yoki parol noto‘g‘ri.");
@@ -56,7 +51,6 @@ const Login = () => {
           </h2>
           {error && <p className="text-red-500 text-center">{error}</p>}
           <div className="flex items-center py-2 ">
-            <FaUser className="mr-3 w-6 h-6" />
             <h2 className="text-xl py-[15px]">Sign into Your Account</h2>
           </div>
           <form onSubmit={handleSubmit} className="flex flex-col">
@@ -84,7 +78,6 @@ const Login = () => {
                 className="absolute right-[8px] top-[13px] cursor-pointer"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <IoIosEyeOff /> : <IoIosEye />}
               </button>
             </div>
             <button

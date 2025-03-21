@@ -1,5 +1,5 @@
 import React from "react";
-//import { FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Dashboard = () => {
         <div className="bg-white  w-[600px] rounded-lg">
           <h2 className="text-[#17a2b8]  text-[50px] font-[700]">Dashboard</h2>
           <div className="flex items-center py-2 ">
-            <FaUser className="mr-3 w-6 h-6" />
+            <FaUser className="mr-3 w-6 h-6"/>
             <h2 className="text-[26px]  ">Welcome Farrux</h2>
           </div>
           <p className="mt-[10px]">

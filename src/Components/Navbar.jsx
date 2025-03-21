@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="bg-[#343a40] w-[1440px] m-auto flex items-center justify-between  h-[70px]">
         <div className="flex ">
           <p className="flex items-center  text-white">
-            <RiCodeSSlashLine  className="w-[25px] h-[25px]  font-bold"/>
+            {/* <RiCodeSSlashLine className="w-[25px] h-[25px]  font-bold"/> */}
             <span className="text-[25px] ml-[5px] font-[700]">DevConnector</span>
           </p>
         </div>

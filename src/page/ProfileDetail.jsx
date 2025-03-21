@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 export const ProfileDetail = () => {
-  const { id } = useParams(); // URL parametridan ID olish
+  const { id } = useParams();
   const [profile, setProfile] = useState(null);
-  const navigate = useNavigate(); // Sahifa navigatsiyasi uchun
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -37,7 +37,7 @@ export const ProfileDetail = () => {
           <p>Skills: {profile.skills}</p>
           <p>Status: {profile.status}</p>
           <button
-            onClick={() => navigate("/")} // Asosiy sahifaga qaytish
+            onClick={() => navigate("/")} 
             className="mt-4 px-4 py-2 bg-blue-500 text-white"
           >
             Qaytish

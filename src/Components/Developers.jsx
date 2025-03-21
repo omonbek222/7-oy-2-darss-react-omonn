@@ -3,6 +3,7 @@ import AuthContext from "../context/AuthContext";
 import Navbar from "./Navbar";
 import Loading from "./Loading";
 import axios from "axios";
+import { FaUser } from "react-icons/fa";
 
 const Developers = () => {
   const [profile, setProfile] = useState([]);
@@ -108,7 +109,7 @@ const Developers = () => {
               <ul className="text-[#17a2b8] flex flex-col">
                 {item.skills.slice(0, 4).map((skill, index) => (
                   <li key={index} className="flex items-center ">
-                    <ImCheckmark className="mr-2" />
+                    {/* <ImCheckmark className="mr-2" /> */}
                     {skill}
                   </li>
                 ))}

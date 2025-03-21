@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { register } from "../service/authService";
 
 import Navbar from "../Components/Navbar";
+import { FaUser } from "react-icons/fa";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -123,7 +124,7 @@ const Register = () => {
                 className="absolute right-[-140px] top-[13px]"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <IoIosEyeOff /> : <IoIosEye />}
+                {/* {showPassword ? <IoIosEyeOff /> : <IoIosEye />} */}
               </button>
             </div>
 
